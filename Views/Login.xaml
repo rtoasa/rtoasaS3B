@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rtoasaS3B.Views.Login"
+             >
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="25">
+        <Label 
+            Text="INICIO DE SESIÓN"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image Source="ecuador.png"
+               WidthRequest="150"/>
+
+        <Entry x:Name="txtUsuario"
+           Placeholder="Ingrese el usuario"
+               MaxLength="25"
+               />
+
+        <Entry x:Name="txtContrasena"
+               Placeholder="Ingrese la contraseña"
+               IsPassword="True"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnIniciar"
+                    Text="INICIAR SESIÓN"
+                    Clicked="btnIniciar_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+            <Button x:Name="btnRegistro"
+                    Text="REGISTRAR "
+                    Clicked="btnRegistro_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>
